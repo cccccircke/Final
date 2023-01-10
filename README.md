@@ -1,8 +1,11 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+# Final
++在缺少測量值的情況下計算有條件的產品故障率，並將其與無條件產品故障率 0.212608 進行比較。
++當 abs(z) > 2.5 且 p-value < 2 % 時，缺失 measurement_3 和缺失 measurement_5 的條件故障率明顯偏離平均故障率，可以在模型中使用特徵missing_3 和 missing_5
++特徵工程：我們可以通過添加按產品代碼分組的測量聚合統計數據作為新特徵，將產品代碼用於特徵工程
++主要NA用HuberRegressor處理
++其他NA用KNNImputer處理
++Model architecture用linear_model.LogisticRegression和GroupKFold(n_splits=5)預測
 
-# My Paper Title
-
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
